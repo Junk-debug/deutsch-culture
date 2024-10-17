@@ -1,6 +1,7 @@
 "use client";
 
 import getSongs from "./songs";
+import Lyrics from "@/components/lyrics"; 
 
 import Player from "@/components/player/player";
 import SongsLibrary from "@/components/songs-library";
@@ -46,7 +47,9 @@ export default function Home() {
           currentSong={currentSong}
         />
       </main>
-      <footer>footer</footer>
+
+        <Lyrics lyricsLink={currentSong.lyrics} /> 
+
     </div>
   );
 }
